@@ -1,0 +1,23 @@
+package:
+  name: hdf5
+  version: "1.8.15.1"
+
+source:
+  fn: hdf5-1.8.15-patch1.tar.gz
+  url:  http://www.hdfgroup.org/ftp/HDF5/current/src/hdf5-1.8.15-patch1.tar.gz
+  sha1: 6640b806b3d002c95964f9ba054a17a49888c431
+
+build:
+  number: 1
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc
+    - zlib
+  run:
+    - zlib
+
+test:
+  commands:
+    - exit $(test -f ${PREFIX}/lib/libhdf5.a)

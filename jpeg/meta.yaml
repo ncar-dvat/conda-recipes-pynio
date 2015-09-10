@@ -1,0 +1,21 @@
+package:
+  name: jpeg
+  version: "8d"
+
+source:
+  fn: jpegsrc.v8d.tar.gz
+  url: file:///Users/dbrown/conda-recipes-ncl/src/jpegsrc.v8d.tar.gz
+  sha1: f080b2fffc7581f7d19b968092ba9ebc234556ff
+  
+build:
+  number: 0 
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc
+
+test:
+  commands:
+    - exit $(test -f ${PREFIX}/bin/cjpeg)
+    - cjpeg --help

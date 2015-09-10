@@ -1,0 +1,28 @@
+package:
+  name: hdfeos5
+  version: "5.1.15"
+
+source:
+  fn: HDF-EOS5.1.15.tar.Z
+  url: ftp://edhs1.gsfc.nasa.gov/edhs/hdfeos5/latest_release/HDF-EOS5.1.15.tar.Z 
+  md5: 5d607a13dd42e559bfc90e278a8ec919
+  patches:
+   # http://hdfeos.org/forums/showthread.php?t=673
+   - EHapi.c.patch
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc
+    - hdf5
+    - zlib
+  run:
+    - zlib
+    - hdf5
+
+test:
+  commands:
+    - exit $(test -f ${PREFIX}/lib/libhe5_hdfeos.a)

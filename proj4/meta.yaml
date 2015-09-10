@@ -1,0 +1,23 @@
+package:
+  name: proj4
+  version: 4.8.0
+
+source:
+  fn: proj-4.8.0.tar.gz
+  url: http://download.osgeo.org/proj/proj-4.8.0.tar.gz
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc
+
+test:
+  files:
+    - test-data.txt
+  commands:
+    - exit $(test -f ${PREFIX}/lib/libproj.so) # [linux]
+    - exit $(test -f ${PREFIX}/lib/libproj.dylib) # [osx]
+    - proj +proj=utm  +lon_0=112w  +ellps=clrk66 data.txt

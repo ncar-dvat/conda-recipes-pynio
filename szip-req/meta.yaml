@@ -1,0 +1,9 @@
+package:
+  name: szip-req
+  version: "1.0"
+
+build:
+  number: 0
+  track-features
+   - szip-req
+

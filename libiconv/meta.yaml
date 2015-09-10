@@ -1,0 +1,20 @@
+package:
+  name: libiconv
+  version: "1.14"
+
+source:
+  fn: libiconv-1.14.tar.gz
+  url:  http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz
+  md5: e34509b1623cec449dfeb73d7ce9c6c6
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc ==4.8.5
+
+test:
+  commands:
+    - exit $(test -f ${PREFIX}/lib/libiconv.so) [linux]

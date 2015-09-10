@@ -1,0 +1,28 @@
+package:
+  name: libnetcdf 
+  version: "4.3.3.1"
+
+source:
+  fn: netcdf-4.3.3.1.tar.gz
+  url: ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-4.3.3.1.tar.gz  # [not win]
+  sha1: 074dd8ef6e8dde3f0c26c7bec0b5d3be6a38bbee
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc
+    - zlib
+    - hdf5
+    - curl
+  run:
+    - zlib
+    - hdf5
+    - curl
+
+test:
+  commands:
+    - exit $(test -f ${PREFIX}/lib/libnetcdf.a)
+    - ncdump --help

@@ -1,0 +1,20 @@
+package:
+  name: g2clib
+  version: 1.5.0
+
+source:
+  path: ../src/g2clib-1.5.0/
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc
+    - libpng
+    - zlib
+    - jpeg
+    - jasper
+test:
+  commands:

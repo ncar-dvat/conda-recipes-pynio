@@ -1,0 +1,38 @@
+package:
+  name: gdal
+  version: "1.11.2"
+
+source:
+  fn: gdal-1.11.2.tar.gz
+  url: http://download.osgeo.org/gdal/1.11.2/gdal-1.11.2.tar.gz
+  md5: 866a46f72b1feadd60310206439c1a76
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc
+    - python
+    - proj4
+    - libpng 
+    - zlib
+    - jpeg
+    - hdf5
+    - libnetcdf
+
+  run:
+    - python
+    - proj4
+    - libpng
+    - zlib
+    - jpeg
+    - libnetcdf
+    - hdf5
+
+test:
+  commands:
+    - exit $(test -f ${PREFIX}/lib/libgdal.so) [linux]
+    - exit $(test -f ${PREFIX}/lib/libgdal.dylib) [osx]
+    - gdal_translate --help

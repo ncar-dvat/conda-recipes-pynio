@@ -1,0 +1,23 @@
+package:
+  name: libtool 
+  version: "2.4.6"
+
+source:
+  fn: libtool-2.4.6.tar.xz
+  url: ftp://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz  # [linux]
+  sha1: 3e7504b832eb2dd23170c91b6af72e15b56eb94e
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - m4
+    - autoconf
+    - automake
+
+test:
+  commands:
+    - exit $(test -f ${PREFIX}/bin/libtool)
+    - libtool --help

@@ -1,0 +1,21 @@
+package:
+  name: curl
+  version: "7.43.0"
+
+source:
+  fn: curl-7.43.0.tar.gz
+  url: http://curl.haxx.se/download/curl-7.43.0.tar.gz 
+  sha1: 0214cb7174c505476f1fb0521ec7d987347cb748 
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - zlib
+  run:
+    - zlib
+
+test:
+  commands:
+    - exit $(test -f ${PREFIX}/lib/libcurl.a)

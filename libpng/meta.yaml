@@ -1,0 +1,25 @@
+package:
+  name: libpng
+  version: "1.2.52"
+
+source:
+  fn: libpng-1.2.52.tar.gz
+  url: http://sourceforge.net/projects/libpng/files/libpng12/1.2.52/libpng-1.2.52.tar.gz  # [not win]
+  sha1: 596a7dbc178861dab5761d74e6a4bfe66c0c31d1
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc
+    - zlib
+  run:
+    - zlib
+
+test:
+  commands:
+    - exit $(test -f ${PREFIX}/lib/libpng12.a)   
+    - exit $(test -f ${PREFIX}/lib/libpng12.so)    # [linux]
+    - exit $(test -f ${PREFIX}/lib/libpng12.dylib) # [osx]

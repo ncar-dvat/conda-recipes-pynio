@@ -1,0 +1,28 @@
+package:
+  name: hdf4
+  version: "4.2.11"
+
+source:
+  fn: hdf-4.2.11.tar.gz
+  url: http://www.hdfgroup.org/ftp/HDF/HDF_Current/src/hdf-4.2.11.tar.gz  # [not win]
+  sha1: fa81aaaee77d150f49ca9d11391467e41b47a3c2
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - gcc
+    - zlib
+    - szip
+    - jpeg
+  run:
+    - zlib
+    - szip
+    - jpeg
+
+test:
+  commands:
+    - exit $(test -f ${PREFIX}/lib/libmfhdf.a)
+    - hdp --help
