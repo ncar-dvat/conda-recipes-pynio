@@ -27,6 +27,8 @@ requirements:
     - gdal
     - libiconv
     - hdfeos5 
+    - libpng
+    - curl
 
   run:
     - libgcc
@@ -45,6 +47,8 @@ requirements:
     - gdal
     - libiconv
     - hdfeos5
+    - libpng
+    - curl
 
 test:
   requires:
