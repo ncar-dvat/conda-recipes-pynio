@@ -1,9 +1,9 @@
 package:
   name: pynio
-  version: "1.5.0beta"
+  version: "1.4.2"
 
 source:
-  path: ../src/pynio-1.5.0-beta
+  path: ../src/pynio-1.4.2
 
 build:
   number: 1
