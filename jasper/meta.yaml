@@ -17,3 +17,5 @@ requirements:
 
 test:
   commands:
+    - exit $(test -f ${PREFIX}/lib/libjasper.a)
+
