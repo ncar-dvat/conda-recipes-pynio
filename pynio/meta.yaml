@@ -54,5 +54,6 @@ test:
   imports:
     - Nio
   commands:
-    - cd $SRC_DIR/test && nosetests -s
+#    - cd $SRC_DIR/test && nosetests -s --ignore-files '.*opendap.*'
+    - cd $SRC_DIR/test && nosetests -s 
 
