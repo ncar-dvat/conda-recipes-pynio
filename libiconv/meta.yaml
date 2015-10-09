@@ -6,9 +6,11 @@ source:
   fn: libiconv-1.14.tar.gz
   url:  http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz
   md5: e34509b1623cec449dfeb73d7ce9c6c6
+  patches:
+    - patch1.patch [linux]
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -18,3 +20,4 @@ requirements:
 test:
   commands:
     - exit $(test -f ${PREFIX}/lib/libiconv.so) [linux]
+    - exit $(test -f ${PREFIX}/lib/libiconv.dylib) [osx]

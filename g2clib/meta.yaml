@@ -6,7 +6,7 @@ source:
   path: ../src/g2clib-1.5.0/
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:

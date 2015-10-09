@@ -8,12 +8,13 @@ source:
   sha1: 9c5735f773922e580bf98c7c7dfda9bbed4c5191
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:
   build:
-   - gcc
+    - gcc
 
 test:
   commands:
+    - exit $(test -f ${PREFIX}/lib/libjasper.a)
