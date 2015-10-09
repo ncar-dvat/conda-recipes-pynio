@@ -1,4 +1,4 @@
-#$Id: Nio.py 16273 2015-07-15 00:19:31Z dbrown $
+#$Id$
 
 '''
 PyNIO enables NetCDF-like access for multiple file formats including
