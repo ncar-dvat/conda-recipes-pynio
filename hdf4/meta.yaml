@@ -15,11 +15,9 @@ requirements:
   build:
     - gcc
     - zlib
-    - szip
     - jpeg
   run:
     - zlib
-    - szip
     - jpeg
 
 test:
