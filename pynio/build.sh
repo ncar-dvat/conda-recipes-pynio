@@ -10,7 +10,6 @@ export F2CLIBS=gfortran
 export HAS_SZIP=0
 export HAS_HDF4=1
 export HAS_HDF5=1
-export HAS_HDFEOS5=1
 export HAS_GDAL=1
 
 export CC=${PREFIX}/bin/gcc
