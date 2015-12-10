@@ -1,12 +1,13 @@
 package:
   name: pynio
-  version: "1.4.2"
+  version: "1.4.3"
 
 source:
-  path: ../src/pynio-1.4.2
+  git_url: https://github.com/NCAR/pynio.git
+  git_rev: 1.4.3
 
 build:
-  number: 4
+  number: 0
   detect_binary_files_with_prefix: true
 
 requirements:
