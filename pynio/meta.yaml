@@ -7,7 +7,7 @@ source:
   git_rev: 1.4.3
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:
