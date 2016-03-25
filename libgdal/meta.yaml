@@ -1,0 +1,50 @@
+package:
+  name: libgdal
+  version: "2.0.2"
+
+source:
+  url: http://download.osgeo.org/gdal/2.0.2/gdal-2.0.2.tar.gz
+  fn: libgdal-2.0.2.tar.gz
+  md5: 573865f3f59ba7b4f8f4cddf223b52a5
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - hdf4
+    - hdf5
+    - geos
+    - proj4
+    - xerces-c
+    - libnetcdf
+    - kealib
+    - libpng
+    - gcc
+    - expat
+  run:
+    - hdf4
+    - hdf5
+    - geos
+    - proj4
+    - xerces-c
+    - libnetcdf
+    - kealib
+    - libpng
+    - gcc
+    - expat
+
+test:
+  commands:
+    - gdal_grid --version      [not win]
+    - gdal_rasterize --version [not win]
+    - gdal_translate --version [not win]
+    - gdaladdo --version       [not win]
+    - gdalenhance --version    [not win]
+    - gdalwarp --version       [not win]
+    - gdalinfo --formats       [not win]
+
+about:
+  home: http://www.gdal.org/
+  license: MIT
+  summary: Geospatial Data Abstraction Library

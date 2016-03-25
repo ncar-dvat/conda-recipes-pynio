@@ -7,7 +7,7 @@ source:
   git_rev: master
 
 build:
-  number: 4
+  number: 7
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -25,8 +25,8 @@ requirements:
     - proj4
     - hdfeos2
     - g2clib
-    - gdal
     - libiconv
+    - libgdal
     - hdfeos5 
     - curl
 
@@ -44,10 +44,10 @@ requirements:
     - proj4
     - hdfeos2
     - g2clib
-    - gdal
     - libiconv
     - hdfeos5
     - curl
+    - libgdal
 
 test:
   requires:
