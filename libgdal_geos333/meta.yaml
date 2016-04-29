@@ -9,12 +9,13 @@ source:
 
 build:
   number: 2
+  string: geos333_2
 
 requirements:
   build:
     - hdf4
     - hdf5
-    - geos
+    - geos 3.3.3
     - proj4
     - xerces-c
     - libnetcdf
@@ -25,7 +26,7 @@ requirements:
   run:
     - hdf4
     - hdf5
-    - geos
+    - geos 3.3.3
     - proj4
     - xerces-c
     - libnetcdf
