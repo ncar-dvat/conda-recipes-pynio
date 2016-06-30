@@ -8,17 +8,17 @@ source:
   md5: 573865f3f59ba7b4f8f4cddf223b52a5
 
 build:
-  number: 2
-  string: geos333_2
+  number: 0
+  string: geos342_ncdf4331_0
 
 requirements:
   build:
     - hdf4
     - hdf5
-    - geos 3.3.3
+    - geos 3.4.2
     - proj4
     - xerces-c
-    - libnetcdf
+    - libnetcdf 4.3.3.1
     - kealib
     - libpng
     - gcc
@@ -26,10 +26,10 @@ requirements:
   run:
     - hdf4
     - hdf5
-    - geos 3.3.3
+    - geos 3.4.2
     - proj4
     - xerces-c
-    - libnetcdf
+    - libnetcdf 4.3.3.1
     - kealib
     - libpng
     - gcc
